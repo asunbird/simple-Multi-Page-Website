@@ -51,7 +51,7 @@ footer {
     background-color: lightgrey;
 }
 /* Building Blocks */
-header {
+.navigation {
     position: fixed;
     top: 0;
     left: 0;
@@ -59,12 +59,12 @@ header {
     height: 130px;
     display: flex;
 }
-main {
+.main-content {
     width: 100vw;
     height: 130px;
     display: flex;
 }
-header {
+.footer {
     position: fixed;
     bottom: 0;
     left: 0;
