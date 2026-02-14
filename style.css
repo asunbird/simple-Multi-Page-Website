@@ -13,15 +13,31 @@
 /* Fonts */
 /* Logo and Headers Font */
 @font-face { font-family: NeverMind Slab; src: url('NeverMindSlab-Regular.ttf'); } 
-
-/* Main contant Font */
+/* Main content Font */
 @font-face { font-family: Roboto Slab; src: url('RobotoSlab-Light.ttf'); }
+/* Fonts */
+
 /* ...Home page styles start... */
-h1 {
+/* Logo and Headers Font */
+h1, title {
     font-family: 'NeverMind Slab', sans-serif;
       }
-p {
+/* Main content Font */
+h3, p, li, a, {
     font-family: "Roboto Slab", serif;
       }
+/* Font sizes */
+body {
+    font-size: 18pt;
+}
+h1 {
+    font-size: 1.4rem;
+}
+h3 {
+    font-size: 1.2rem;
+}
+p, li, a {
+    font-size: 1rem;
+}
 
 /* ...Home page styles end... */
