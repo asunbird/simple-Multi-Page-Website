@@ -11,10 +11,17 @@
     text-decoration: none;
 }
 /* Fonts */
+/* Logo and Headers Font */
+@font-face { font-family: NeverMind Slab; src: url('NeverMindSlab-Regular.ttf'); } 
 
-
+/* Main contant Font */
+@font-face { font-family: Roboto Slab; src: url('RobotoSlab-Light.ttf'); }
 /* ...Home page styles start... */
-
-
+h1 {
+    font-family: 'NeverMind Slab', sans-serif;
+      }
+p {
+    font-family: "Roboto Slab", serif;
+      }
 
 /* ...Home page styles end... */
