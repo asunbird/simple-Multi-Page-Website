@@ -10,9 +10,9 @@ div, p, nav, img, h1, h2, h3, h4, h5, h6, ul, li, a {
 }
 /* Fonts */
 /* Logo and Headers Font */
-@font-face { font-family: NeverMind Slab; src: url('NeverMindSlab-Regular.ttf'); } 
+@font-face { font-family: NeverMind Slab; src: url('./fonts/NeverMindSlab-Regular.ttf'); } 
 /* Main content Font */
-@font-face { font-family: Roboto Slab; src: url('RobotoSlab-Light.ttf'); }
+@font-face { font-family: Roboto Slab; src: url('./fonts/RobotoSlab-Light.ttf'); }
 /* Fonts */
 
 /* ...Home page styles start... */
