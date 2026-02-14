@@ -1,11 +1,9 @@
 /* ...General styles...Reset... */
-* {
+div, p, nav, img, h1, h2, h3, h4, h5, h6, ul, li, a {
     display: block;
     margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
     line-height: 1;
     list-style: none;
     text-decoration: none;
@@ -41,13 +39,13 @@ p, li, a {
     font-size: 1rem;
 }
 /* BG color Styles */
-body {
-    background-color: whitesmoke;
-}
-header {
+.navigation {
     background-color: white;
 }
-footer {
+.main-content {
+    background-color: whitesmoke;
+}
+.footer {
     background-color: lightgrey;
 }
 /* Building Blocks */
