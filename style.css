@@ -18,13 +18,14 @@
 /* Fonts */
 
 /* ...Home page styles start... */
+/* ............................ */
 /* Logo and Headers Font */
 h1, title {
     font-family: 'NeverMind Slab', sans-serif;
       }
 /* Main content Font */
 h3, p, li, a {
-    font-family: "Roboto Slab", serif;
+    font-family: 'Roboto Slab', serif;
       }
 /* Font sizes */
 body {
@@ -39,5 +40,37 @@ h3 {
 p, li, a {
     font-size: 1rem;
 }
-
+/* BG color Styles */
+body {
+    background-color: whitesmoke;
+}
+header {
+    background-color: white;
+}
+footer {
+    background-color: lightgrey;
+}
+/* Building Blocks */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 130px;
+    display: flex;
+}
+main {
+    width: 100vw;
+    height: 130px;
+    display: flex;
+}
+header {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100px;
+    display: flex;
+}
+/* ............................ */
 /* ...Home page styles end... */
