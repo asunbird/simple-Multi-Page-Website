@@ -222,7 +222,8 @@ p, li, a {
 }
 .grid-container {
     width: 90vw;
-    height: fit-content;
+    height: 100vh;
+    min-height: fit-content;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 30px;
@@ -235,4 +236,17 @@ p, li, a {
     margin: 30px;
 }
 /* ...Contact page... */
-
+#contact {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100vw;
+    padding: 40px 0;
+    text-align: center;
+}
+#contact h1 {
+    margin-bottom: 16px;
+}
+#contact h3 {
+    margin-bottom: 16px;
+}
