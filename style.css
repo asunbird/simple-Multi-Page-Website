@@ -83,7 +83,7 @@ p, li, a {
 }
 .main-content {
     width: 100vw;
-    min-height: 330px;
+    min-height: 80vh;
     height: fit-content;
     display: flex;
 }
@@ -195,14 +195,44 @@ p, li, a {
 }
 
 
-/* ...About section... */
+/* ...About page... */
 #about {
     display: flex;
     flex-flow: column;
     align-items: center;
     width: 100vw;
     padding-top: 140px;
+    text-align: center;
 }
 #about h1 {
     margin-bottom: 16px;
 }
+
+/* ...Services page... */
+#services {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100vw;
+    padding: 40px 0;
+    text-align: center;
+}
+#services h1 {
+    margin-bottom: 16px;
+}
+.grid-container {
+    width: 90vw;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px;
+}
+.grid-item {
+    display: flex;
+    min-width: 140px;
+    height: 20vh;
+    min-height: 100px;
+    margin: 30px;
+}
+/* ...Contact page... */
+
