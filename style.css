@@ -227,13 +227,18 @@ p, li, a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 30px;
+    border: 0px;
 }
 .grid-item {
     display: flex;
     min-width: 140px;
-    height: 20vh;
+    height: 40vh;
     min-height: 100px;
     margin: 30px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px 0.6px rgb(106, 106, 106, 0.4);
+
 }
 /* ...Contact page... */
 #contact {
