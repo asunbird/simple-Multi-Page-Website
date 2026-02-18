@@ -9,14 +9,17 @@ div, p, nav, img, h1, h2, h3, h4, h5, h6, ul, li, a, body, header, footer, secti
     list-style: none;
     text-decoration: none;
 }
-/* Fonts */
+/* .............................*/
+
+/* Import Fonts */
 /* Logo and Headers Font */
 @font-face { font-family: NeverMind Slab; src: url('./fonts/NeverMindSlab-Regular.ttf'); } 
 /* Main content Font */
 @font-face { font-family: Roboto Slab; src: url('./fonts/RobotoSlab-Light.ttf'); }
-/* Fonts */
+/* ..... */
 
-/* Logo and Headers Fonts */
+/* General Fonts Styles */
+/* Logo and Header Font styles */
 h1, title {
     font-family: 'NeverMind Slab', sans-serif;
       }
@@ -45,7 +48,7 @@ p, li, a {
     font-size: 1.4rem;
     font-weight: bold;
 }
-.banner-text h1 {
+.hero-text h1 {
     font-size: 3rem;
 }
 .footer p {
@@ -57,7 +60,7 @@ p, li, a {
     text-decoration: none;
     text-shadow: 1px 1px 2px rgb(163, 246, 252, 0.6);
 }
-/* BG color Styles */
+/* General BG color Styles */
 .navigation {
     background-color: white;
 }
@@ -71,97 +74,14 @@ p, li, a {
     background-color: lightgrey;
 }
 
-/* Building Blocks */
-.navigation {
-    width: 100vw;
-    height: 100px;
-    display: flex;
-    align-items: flex-start;
-    flex-flow: row;
-    justify-content: space-between;
-    padding: 16px;
-}
-.main-content {
-    width: 100vw;
-    min-height: 80vh;
-    height: fit-content;
-    display: flex;
-}
-
-.banner {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    flex-flow: column;
-    align-items: center;
-    padding: 16px;
-    background-image: url("particles.jpg");
-    background-color: lightgray;
-    background-position: center;
-    background-size: cover;
-}
-.banner-text {
-    width: 90%;
-    height: 20%;
-    margin-top: 60px;
-    text-align: center;
-}
-.banner-text h1 {
-    margin-bottom: 16px;
-}
-.banner-text h3 {
-    margin-bottom: 40px;
-}
-.hero {
-    height: 100vh;
-}
-.services {
-    width: 100vh;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-}
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    margin-top: 20px;
-    border: 1px solid black;
-}
-.grid-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
-    border: 0.6px solid black;
-    border-radius: 4px;
-    box-shadow: 1px 1px 1px 1px rgb(163, 246, 252);
-}
-
-.footer {
-    bottom: 0;
-    width: 100vw;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    flex-flow: row;
-    justify-content: center;
-    padding: 16px;
-}
-
-/* Navigation and Logo */
+/* Building Blocks. Main sections Styles */
+/* ...................................... */
+/* HEADER Styles: Navigation and Logo. All Pages */
+/* Logo container styles */
 .logo {
     display: block;
     width: 160px;
     height: 68px;
-    /*
-    border: 0.6px solid black;
-    border-radius: 4px;
-    box-shadow: 1px 1px 1px 1px rgb(163, 246, 252); */
-    
 }
 #logo-text {
     font-size: 3rem;
@@ -180,7 +100,7 @@ p, li, a {
 #logo-elem {
    font-size: 2rem; 
 }
-
+/* Navigation container Styles */
 .nav-links {
     width: 28vw;
     height: 70px;
@@ -189,31 +109,73 @@ p, li, a {
     align-items: center;
     flex-flow: row;
     gap: 20px;
-    /*
-    border: 0.6px solid black;
-    border-radius: 4px; */
+}
+.navigation {
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    align-items: flex-start;
+    flex-flow: row;
+    justify-content: space-between;
+    padding: 16px;
+}
+/* .......................... */
+/* FOOTER Styles All Pages */
+.footer {
+    bottom: 0;
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+    justify-content: center;
+    padding: 16px;
+    font-weight: bold;
+}
+/* ........................... */
+/* HOME Page: MAIN Content Styles */
+/* class="main-content" Styles for All Pages */
+.main-content {
+    width: 100vw;
+    min-height: 80vh;
+    height: fit-content;
+    display: flex;
+}
+/* Hero section */
+.hero {
+    height: 100vh;
+    background-image: url("particles.jpg");
+    background-color: lightgray;
+    background-position: center;
+    background-size: cover;
 }
 
-
-/* ...About page... */
-#about {
+.hero-text {
+    width: 100vw;
+    height: 20%;
     display: flex;
     flex-flow: column;
     align-items: center;
-    width: 100vw;
-    padding-top: 140px;
+    padding: 16px;
+    margin-top: 60px;
     text-align: center;
 }
-#about h1 {
+.hero-text h1 {
     margin-bottom: 16px;
 }
+.hero-text h3 {
+    margin-bottom: 40px;
+}
 
-/* ...Services page... */
+/* SERVICES Page: MAIN Content Styles */
+/* class="main-content" Styles for All Pages */
 #services {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
     display: flex;
     flex-flow: column;
     align-items: center;
-    width: 100vw;
     padding: 40px 0;
     text-align: center;
 }
@@ -226,20 +188,42 @@ p, li, a {
     min-height: fit-content;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin-top: 20px;
     padding: 30px;
     border: 0px;
 }
 .grid-item {
-    display: flex;
     min-width: 140px;
     height: 40vh;
     min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: 30px;
+    padding: 16px;
     border: 1px solid black;
     border-radius: 4px;
     box-shadow: 1px 1px 1px 0.6px rgb(106, 106, 106, 0.4);
-
 }
+
+
+/* ABOUT US Page: MAIN Content Styles */
+/* ...About page... */
+#about {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100vw;
+    padding-top: 100px;
+    text-align: center;
+}
+#about h1, h3 {
+    margin-bottom: 20px;
+}
+
+/* CONTACT Page: MAIN Content Styles */
 /* ...Contact page... */
 #contact {
     display: flex;
