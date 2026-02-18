@@ -9,6 +9,10 @@ div, p, nav, img, h1, h2, h3, h4, h5, h6, ul, li, a, body, header, footer, secti
     list-style: none;
     text-decoration: none;
 }
+a, button {
+    cursor: pointer;
+}
+
 /* .............................*/
 
 /* Import Fonts */
@@ -27,9 +31,12 @@ h1, title {
     font-family: 'NeverMind Slab', sans-serif; 
 }
 /* Main content Font */
-h3, p, li, a {
+h3, p, li, a, form, input, textarea, button {
     font-family: 'Roboto Slab', serif;
       }
+button {
+    font-weight: bold;
+}
 /* Font sizes and weight */
 body {
     font-size: 18pt;
@@ -52,6 +59,9 @@ p, li, a {
     font-size: 3rem;
 }
 .grid-item p {
+    font-size: 0.9rem;
+}
+form label {
     font-size: 0.9rem;
 }
 .footer p {
@@ -244,6 +254,7 @@ p, li, a {
     flex-flow: column;
     align-items: center;
     width: 100vw;
+    height: 60vh;
     padding: 40px 0;
     text-align: center;
 }
@@ -252,6 +263,39 @@ p, li, a {
 }
 #contact h3 {
     margin-bottom: 16px;
+}
+.contact-form {
+    display: flex;
+    /*
+    border: 1px solid black;
+    border-radius: 8px;
+    */
+    justify-content: center;
+    align-items: start;
+    flex-flow: column;
+    padding: 16px;
+}
+.contact-form input {
+    width: 380px;
+    min-width: 280px;
+    height: 30px;
+    min-height: 20px;
+    margin: 10px;
+}
+.contact-form textarea {
+    width: 380px;
+    min-width: 280px;
+    height: 60px;
+    min-height: 20px;
+    margin: 10px;
+}
+.contact-form button {
+    width: 28%;
+    height: 30px;
+    margin: 10px;   
+}
+.contact-form label {
+
 }
 
 /* MEDIA QUERY Semantic Styles */
