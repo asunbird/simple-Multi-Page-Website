@@ -292,10 +292,7 @@ form label {
 .contact-form button {
     width: 28%;
     height: 30px;
-    margin: 10px;   
-}
-.contact-form label {
-
+    margin: auto;   
 }
 
 /* MEDIA QUERY Semantic Styles */
