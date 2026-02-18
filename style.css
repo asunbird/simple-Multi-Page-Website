@@ -51,6 +51,9 @@ p, li, a {
 .hero-text h1 {
     font-size: 3rem;
 }
+.grid-item p {
+    font-size: 0.9rem;
+}
 .footer p {
     font-size: 0.9rem;
 }
@@ -191,23 +194,34 @@ p, li, a {
     grid-gap: 20px;
     margin-top: 20px;
     padding: 30px;
-    border: 0px;
+    border: 0;
+}
+.grid-item-container {
+    width: 98%;
+    height: 98%; 
+    border-radius: 8px;
+    background-color: whitesmoke;
 }
 .grid-item {
     min-width: 140px;
-    height: 40vh;
-    min-height: 100px;
+    height: 50vh;
+    min-height: 360px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 30px;
     padding: 16px;
-    border: 1px solid black;
-    border-radius: 4px;
-    box-shadow: 1px 1px 1px 0.6px rgb(106, 106, 106, 0.4);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgb(106, 106, 106, 0.4);
+    background-color: white;
 }
-
+.item-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
 
 /* ABOUT US Page: MAIN Content Styles */
 /* ...About page... */
@@ -239,3 +253,5 @@ p, li, a {
 #contact h3 {
     margin-bottom: 16px;
 }
+
+/* MEDIA QUERY Semantic Styles */
