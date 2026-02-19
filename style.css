@@ -83,11 +83,19 @@ form label {
 }
 
 /* Font color Styles */
+
 .nav-links li a {
     color: black;
     text-decoration: none;
     text-shadow: 1px 1px 2px rgb(163, 246, 252, 0.6);
 }
+
+#deadLink {
+    color: rgb(106, 106, 106, 0.4);
+    text-shadow: none;
+    cursor: default;
+}
+
 /* General BG color Styles */
 .navigation {
     background-color: white;
@@ -244,6 +252,9 @@ form label {
 }
 #services h1 {
     margin-bottom: 16px;
+}
+#services h3 {
+    margin-bottom: 0;
 }
 .grid-container {
     width: 90vw;
@@ -405,9 +416,7 @@ form label {
 /* MEDIA QUERY Semantic Styles */
 /* For Services Page */
 @media (max-width: 1320px) {
-    #services h1 {
-        margin-bottom: 0;
-    }
+
    .grid-container {
     width: 78vw;
     grid-template-columns: repeat(2, 2fr);
