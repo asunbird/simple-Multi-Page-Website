@@ -294,22 +294,17 @@ form label {
     padding: 40px 0;
     text-align: center;
 }
-#contact h1 {
+#contact h1, h3, p {
     margin-bottom: 16px;
 }
-#contact h3 {
-    margin-bottom: 16px;
-}
+
 .contact-form {
-    display: flex;
-    /*
     border: 1px solid black;
     border-radius: 8px;
-    */
     justify-content: center;
     align-items: start;
     flex-flow: column;
-    padding: 16px;
+    padding: 30px;
 }
 .contact-form input {
     width: 380px;
@@ -329,6 +324,18 @@ form label {
     width: 28%;
     height: 30px;
     margin: auto;   
+}
+#contact-form {
+    display: flex;
+}
+#form-submit-message {
+    display: none;
+    width: 100vw;
+    height: 20%;
+    text-align: center;
+    padding: 16px;
+    margin: 60px 0 30px 0;
+    text-align: center;
 }
 
 /* MEDIA QUERY Semantic Styles */
