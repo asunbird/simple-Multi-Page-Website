@@ -12,7 +12,11 @@ div, p, nav, img, h1, h2, h3, h4, h5, h6, ul, li, a, body, header, footer, secti
 a, button {
     cursor: pointer;
 }
-
+.main-image {
+    width: 80%;
+    height: auto;
+    min-width: 200px;
+}
 /* .............................*/
 
 /* Import Fonts */
@@ -136,7 +140,7 @@ form label {
     padding: 16px;
 }
 .nav-links {
-    width: 28vw;
+    width: 60vw;
     height: 70px;
     display: flex;
     justify-content: center;
@@ -166,7 +170,7 @@ form label {
 /* class="main-content" Styles for All Pages */
 .main-content {
     width: 100%;
-    height: auto;
+    height: 80%;
 }
 /* Hero section */
 .hero {
@@ -179,24 +183,25 @@ form label {
 
 .hero-text {
     width: 100vw;
-    height: 20%;
     display: flex;
     flex-flow: column;
     align-items: center;
     padding: 16px;
-    margin: 60px 0 30px 0;
+    margin: 0;
     text-align: center;
 }
 .hero-text h1 {
-    margin-bottom: 16px;
+    margin: 60px auto 16px auto;
 }
 
 .hero-btns {
-    width: 40%;
+    width: 60%;
     min-width: 200px;
     height: 32px;
     margin: auto;  
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-flow: row;
     flex-wrap: wrap;
     gap: 16px;
@@ -227,8 +232,6 @@ form label {
 /* SERVICES Page: MAIN Content Styles */
 /* class="main-content" Styles for All Pages */
 #services {
-    width: 100vw;
-    height: 100vh;
     position: relative;
     display: flex;
     flex-flow: column;
@@ -257,9 +260,9 @@ form label {
     background-color: whitesmoke;
 }
 .grid-item {
-    min-width: 140px;
+    min-width: 300px;
     height: 50vh;
-    min-height: 360px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -284,11 +287,12 @@ form label {
     flex-flow: column;
     align-items: center;
     width: 100vw;
-    padding-top: 100px;
+    padding-top: 80px;
     text-align: center;
 }
 #about h1, h3 {
     margin-bottom: 20px;
+    width: 80%;
 }
 
 /* CONTACT Page: MAIN Content Styles */
@@ -347,7 +351,40 @@ form label {
 }
 
 /* MEDIA QUERY Semantic Styles */
-@media (max-width: 600px) {
+/* For Services Page */
+@media (max-width: 1320px) {
+    #services h1 {
+        margin-bottom: 0;
+    }
+   .grid-container {
+    width: 78vw;
+    grid-template-columns: repeat(2, 2fr);
+    margin-top: 10px;
+    } 
+    .grid-item {
+    height: 52vh;
+    min-height: 420px;
+    text-align: center;
+    }
+    .grid-item h3 {
+        width: 100%;
+        margin: 0 auto 16 auto;
+    }
+}
+@media (max-width: 1030px) {
+    .grid-container {
+    width: 50%;
+    min-width: 420px;
+    grid-template-columns: repeat(1, 3fr);
+    margin-top: 10px;
+    } 
+    .grid-item {
+        margin: 0;
+    }
+}
+/* ............... */
+
+@media (max-width: 602px) {
     /* Logo container All Pages */
     .logo {
     width: 100%;
@@ -387,17 +424,40 @@ form label {
         margin: 0;
     }
     /* Footer All Pages */
-    .footer {   
-        height: fit-content;
+    .footer {  
+        height: 30%; 
+        max-height: fit-content;
         padding: 10px;
     }
     /* Home Page Main section */
 
     .hero-text h1 {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
+    line-height: 3rem;
     }
     .hero-btns {
-    width: 80%;
-    gap: 10px;
+    width: 60%;
+    margin-top: 30px;
+    }
+}
+
+@media (max-width: 436px) {
+    .nav-links {
+        width: 80vw;
+        margin-top: 16px;
+    } 
+    .hero-btns {
+    margin-top: 80px;
+    }
+    .hero-btns button {
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 140px;
+    height: fit-content;
+    }
+    /* Footer All Pages */
+    .copyright {
+        width: 240px;
+        min-width: 40%;
     }
 }
