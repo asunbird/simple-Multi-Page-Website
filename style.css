@@ -539,6 +539,12 @@ form label {
     }
     /* For About Us Page */
     .avatars-container {
-        width: 68%;
+        width: 70%;
+    }
+    .teamAvatar {
+    width: 7.8vw;
+    height: 7.8vw;
+    min-width: 36px;
+    min-height: 36px;
     }
 }
