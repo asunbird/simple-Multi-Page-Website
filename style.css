@@ -78,6 +78,9 @@ form label {
     text-shadow: 1px 1px 2px rgb(163, 246, 252);
     margin-bottom: 16px;
 }
+.avatars-caption p {
+    font-size: 1.4rem;
+}
 
 /* Font color Styles */
 .nav-links li a {
@@ -294,6 +297,49 @@ form label {
     margin-bottom: 20px;
     width: 80%;
 }
+#aboutTeam {
+    width: 60%;
+    text-align: left;
+    margin: 0 auto;
+}
+.avatars-container {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.avatars-caption {
+    width: 7.8vw;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.teamAvatar {
+    width: 6vw;
+    height: 6vw;
+    background-color: rgb(230, 230, 230);
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 10px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#a-1 {
+    background-image: url(A-1.png);
+}
+#a-2 {
+    background-image: url(A-2.png);
+}
+#a-3 {
+    background-image: url(A-3.png);
+}
+#a-4 {
+    background-image: url(A-4.png);
+}
 
 /* CONTACT Page: MAIN Content Styles */
 /* ...Contact page... */
@@ -301,8 +347,6 @@ form label {
     display: flex;
     flex-flow: column;
     align-items: center;
-    width: 100vw;
-    height: 60vh;
     padding: 40px 0;
     text-align: center;
 }
@@ -319,14 +363,14 @@ form label {
     padding: 30px;
 }
 .contact-form input {
-    width: 380px;
+    width: 30vw;
     min-width: 280px;
     height: 30px;
     min-height: 20px;
     margin: 10px;
 }
 .contact-form textarea {
-    width: 380px;
+    width: 30vw;
     min-width: 280px;
     height: 60px;
     min-height: 20px;
@@ -349,6 +393,14 @@ form label {
     margin: 60px 0 30px 0;
     text-align: center;
 }
+#contact .location {
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
 
 /* MEDIA QUERY Semantic Styles */
 /* For Services Page */
@@ -370,6 +422,10 @@ form label {
         width: 100%;
         margin: 0 auto 16 auto;
     }
+    /* For About Us Page */
+    .avatars-caption {
+    font-size: 1.1rem;
+    }
 }
 @media (max-width: 1030px) {
     .grid-container {
@@ -381,10 +437,31 @@ form label {
     .grid-item {
         margin: 0;
     }
+    /* For About Us Page */
+    .avatars-caption {
+    width: 8vw;
+    font-size: 0.7rem;
+    line-height: 1.2rem;
+    }
 }
 /* ............... */
 
 @media (max-width: 602px) {
+    /* For About Us Page */
+    .avatars-container {
+        width: 58%;
+    }
+    .avatars-caption {
+    width: 8vw;
+    font-size: 0.6rem;
+    line-height: 1.2rem;
+    }
+    .teamAvatar {
+    width: 8vw;
+    height: 8vw;
+    min-width: 40px;
+    min-height: 40px;
+    }
     /* Logo container All Pages */
     .logo {
     width: 100%;
@@ -459,5 +536,9 @@ form label {
     .copyright {
         width: 240px;
         min-width: 40%;
+    }
+    /* For About Us Page */
+    .avatars-container {
+        width: 68%;
     }
 }
