@@ -1,1 +1,5 @@
 .DS_Store
+
+# Vscode project files
+.vscode
+
