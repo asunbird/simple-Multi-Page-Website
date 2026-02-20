@@ -186,7 +186,7 @@ form label {
 /* Hero section */
 .hero {
     height: 100vh;
-    background-image: url("particles.jpg");
+    background-image: url("/images/particles.jpg");
     background-color: lightgray;
     background-position: center;
     background-size: cover;
@@ -340,16 +340,16 @@ form label {
     background-repeat: no-repeat;
 }
 #a-1 {
-    background-image: url(A-1.png);
+    background-image: url(/images/A-1.png);
 }
 #a-2 {
-    background-image: url(A-2.png);
+    background-image: url(/images/A-2.png);
 }
 #a-3 {
-    background-image: url(A-3.png);
+    background-image: url(/images/A-3.png);
 }
 #a-4 {
-    background-image: url(A-4.png);
+    background-image: url(/images/A-4.png);
 }
 
 /* CONTACT Page: MAIN Content Styles */
