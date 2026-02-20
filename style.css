@@ -389,6 +389,7 @@ form label {
 }
 .contact-form button {
     width: 28%;
+    min-width: 180px;
     height: 30px;
     margin: auto;   
 }
