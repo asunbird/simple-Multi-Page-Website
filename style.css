@@ -150,11 +150,11 @@ p, a { font-size: 1rem; line-height: 1.6rem; }
     flex-wrap: wrap;
     gap: var(--spacing-md);
     margin-top: var(--spacing-md);
-    width: 60%;
+    width: 70%;
     min-width: 200px;
 }
 .hero-btns button {
-    width: 106px;
+    width: 130px;
     height: 30px;
     font-weight: bold;
 }
@@ -338,7 +338,7 @@ p, a { font-size: 1rem; line-height: 1.6rem; }
 .contact-form button {
     width: 28%;
     min-width: 180px;
-    height: 30px;
+    height: 50px;
     margin: 0 auto;   
 }
 #form-submit-message {
