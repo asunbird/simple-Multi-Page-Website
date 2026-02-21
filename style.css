@@ -186,10 +186,11 @@ form label {
 /* Hero section */
 .hero {
     height: 100vh;
-    background-image: url("./images/particles.jpg");
+/* Background style before adding Vanta.js - Animated website background */   
+/*  background-image: url("./images/particles.jpg");
     background-color: lightgray;
     background-position: center;
-    background-size: cover;
+    background-size: cover;  */
 }
 
 .hero-text {
