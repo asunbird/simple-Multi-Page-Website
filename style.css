@@ -1,4 +1,4 @@
-/* ...General styles...Reset... */
+/* ...Reset... styles... */
 div, p, nav, img, h1, h2, h3, h4, h5, h6, ul, li, a, body, header, footer, section, main {
     box-sizing: border-box;
     display: block;
@@ -12,550 +12,495 @@ div, p, nav, img, h1, h2, h3, h4, h5, h6, ul, li, a, body, header, footer, secti
 a, button {
     cursor: pointer;
 }
-.main-image {
-    width: 80%;
-    height: auto;
-    min-width: 200px;
-}
-/* .............................*/
 
-/* Import Fonts */
+/* =======================================
+    1. VARIABLES (Design "Control Center")
+   ======================================= */
+:root {
+    /* Colors */
+    --clr-bg-nav: #ffffff; /* navigation background color "white" */
+    --clr-bg-main: whitesmoke; /* main background color "whitesmoke" */
+    --clr-text-main: #000000; /* main text color "black" */
+    --clr-text-muted: rgba(106, 106, 106, 0.4);
+    --clr-accent: rgb(163, 246, 252); /* accent color "neon blue" */
+    --clr-accent-shadow: rgba(163, 246, 252, 0.6); /* accent color "neon blue" shadow */
+    --clr-dark-shadow: rgba(28, 35, 35, 0.8);
+
+    /* Typography */
+    --font-heading: 'NeverMind Slab', sans-serif;
+    --font-body: 'Roboto Slab', serif;
+    
+    /* Spacing (Standardized to an 8px scale) */
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 32px;
+    --spacing-xl: 64px;
+}
+/* IMPORT FONTS */
 /* Logo and Headers Font */
 @font-face { font-family: NeverMind Slab; src: url('./fonts/NeverMindSlab-Regular.ttf'); } 
 /* Main content Font */
 @font-face { font-family: Roboto Slab; src: url('./fonts/RobotoSlab-Light.ttf'); }
-/* ..... */
 
-/* General Fonts Styles */
-/* Logo and Header Font styles */
-h1, title {
-    font-family: 'NeverMind Slab', sans-serif;
-      }
-.nav-links li a {
-    font-family: 'NeverMind Slab', sans-serif; 
-}
-/* Main content Font */
-h3, p, li, a, form, input, textarea, button {
-    font-family: 'Roboto Slab', serif;
-      }
-button {
-    font-weight: bold;
-}
-/* Font sizes and weight */
+/* =======================================
+    2. TYPOGRAPHY & BASE STYLES
+   ======================================= */
 body {
     font-size: 18pt;
+    color: var(--clr-text-main); /* main text color "black" */
+    background-color: var(--clr-bg-main); /* main background color "whitesmoke" */
 }
-h1 {
-    font-size: 1.4rem;
+/* Logo and Header Font styles */
+h1, .nav-links li a {
+    font-family: var(--font-heading);
 }
-h3 {
-    font-size: 1.2rem;
-    line-height: 1.6rem;
+/* Main content Font */
+h3, p, li, a, button, form, input, textarea {
+    font-family: var(--font-body);
 }
-p, li, a {
-    font-size: 1rem;
-    line-height: 1.6rem;
-}
-.nav-links li a {
-    font-size: 1.4rem;
-    font-weight: bold;
-}
-.hero-text h1 {
-    font-size: 3rem;
-}
-.grid-item p {
-    font-size: 0.9rem;
-}
-form label {
-    font-size: 0.9rem;
-}
-.footer p {
-    font-size: 0.9rem;
-}
-#emojis {
-     visibility: hidden; 
-    font-size: 1.6rem;
-    text-shadow: 1px 1px 2px rgb(163, 246, 252);
-    margin-bottom: 16px;
-}
-.avatars-caption p {
-    font-size: 1.4rem;
-}
+/* Font sizes and weight */
+h1 { font-size: 1.4rem; }
+h3 { font-size: 1.2rem; line-height: 1.6rem; }
+p, a { font-size: 1rem; line-height: 1.6rem; }
 
-/* Font color Styles */
-
-.nav-links li a {
-    color: black;
-    text-decoration: none;
-    text-shadow: 1px 1px 2px rgb(163, 246, 252, 0.6);
-}
-
-#deadLink {
-    color: rgb(106, 106, 106, 0.4);
-    text-shadow: none;
-    cursor: default;
-}
-
-/* General BG color Styles */
+/* =======================================
+    3. HEADER & NAVIGATION
+   ======================================= */
+   /* HEADER Styles: Navigation and Logo. All Pages */
 .navigation {
-    background-color: white;
-}
-.main-content {
-    background-color: whitesmoke;
-}
-.services {
-    background-color: whitesmoke;
-}
-.footer {
-    background-color: lightgrey;
-}
-
-/* Building Blocks. Main sections Styles */
-/* ...................................... */
-/* HEADER Styles: Navigation and Logo. All Pages */
-/* Logo container styles */
-.logo {
+    background-color: var(--clr-bg-nav); /* navigation background color "white" */
+    width: 100vw;
+    height: 100px;
     display: flex;
     align-items: center;
-    justify-content: start;
-    flex-flow: column;
-    width: 160px;
-    height: 68px;
+    justify-content: space-between;
+    padding: var(--spacing-md);
+}
+/* Logo Setup */
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 #logo-text {
     font-size: 3rem;
     font-weight: bold;
     letter-spacing: 0.5rem;
-    text-shadow: 1px 1px 2px rgb(163, 246, 252);
-    margin: 4px 0;
-}
-#logo-caption {
-    font-size: 0.58rem;
-    font-weight: bold;
-    letter-spacing: 0rem;
-    text-shadow: 0.1px 0.1px 0.6px rgb(28, 35, 35);
-    text-transform: uppercase;
-    margin: 4px 0;
+    text-shadow: 1px 1px 2px var(--clr-accent-shadow);
+    margin: var(--spacing-sm) 0;
 }
 #logo-elem {
    font-size: 2rem; 
 }
-/* Navigation container Styles */
-.navigation {
-    width: 100vw;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    flex-flow: row;
-    justify-content: space-between;
-    padding: 16px;
+#logo-caption {
+    font-size: 0.58rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0.1px 0.1px 0.6px var(--clr-dark-shadow);
+    margin: 0 0 var(--spacing-sm) 0;
 }
+/* Navigation Links Setup */
 .nav-links {
     width: 60vw;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row;
-    flex-wrap: wrap;
-    gap: 20px;
+    min-height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg); /* Standardized to an 8px scale */
+    text-align: center;
 }
-
-/* .......................... */
-/* FOOTER Styles All Pages */
-.footer {
-    bottom: 0;
-    width: 100vw;
-    height: 50px;
-    max-height: 60px;
-    display: flex;
-    align-items: center;
-    flex-flow: row;
-    justify-content: center;
-    padding: 12px auto;
+.nav-links li a {
+    color: var(--clr-text-main); /* main text color "black" */
+    font-size: 1.4rem;
     font-weight: bold;
-    flex-wrap: wrap;
+    text-shadow: 1px 1px 2px var(--clr-accent-shadow);
 }
-/* ........................... */
+#deadLink {
+    color: var(--clr-text-muted);
+    text-shadow: none;
+    cursor: default;
+}
+/* =======================================
+    4. HERO SECTION
+   ======================================= */
 /* HOME Page: MAIN Content Styles */
-/* class="main-content" Styles for All Pages */
-.main-content {
-    width: 100%;
-    height: 80%;
-}
-/* Hero section */
 .hero {
-    height: 100vh;
-/* Background style before adding Vanta.js - Animated website background */   
-/*  background-image: url("./images/particles.jpg");
-    background-color: lightgray;
-    background-position: center;
-    background-size: cover;  */
-}
-
-.hero-text {
     width: 100vw;
+    height: 100vh;
+    /* background-color acts as a fallback while Vanta.js loads */
+    background-color: var(--clr-bg-main); /* main background color "whitesmoke" */
     display: flex;
     flex-flow: column;
     align-items: center;
-    padding: 16px;
-    margin: 0;
+    /* padding-top ensures content isn't hidden under the nav */
+    padding-top: var(--spacing-xl);
+}
+.hero-text {
     text-align: center;
+    padding: var(--spacing-md);    
 }
 .hero-text h1 {
-    margin: 60px auto 16px auto;
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
 }
-
 .hero-btns {
-    width: 60%;
-    min-width: 200px;
-    height: 32px;
-    margin: auto;  
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-flow: row;
     flex-wrap: wrap;
-    gap: 16px;
-    margin-top: 16px;
-    /*
-    border: 1px solid black;
-    border-radius: 8px; */
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+    width: 60%;
+    min-width: 200px;
 }
 .hero-btns button {
     width: 106px;
     height: 30px;
+    font-weight: bold;
+}
+#emojis {
+    visibility: hidden;
+    font-size: 1.6rem;
+    text-shadow: 1px 1px 2px var(--clr-accent-shadow);
+    margin-bottom: var(--spacing-md);
 }
 #secret-message {
     visibility: hidden;
     width: 40%;
     min-width: 180px;
-    padding: 30px 16px 16px 16px;
-    height: fit-content;
-    margin: 10px auto 0 auto;  
+    padding: var(--spacing-lg) var(--spacing-md) var(--spacing-md) var(--spacing-md);
+    margin-top: var(--spacing-md);
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
-    border-radius: 8px; 
-    background-color: white;
+    border: 1px solid var(--clr-text-main);
+    border-radius: var(--spacing-sm); 
+    background-color: var(--clr-bg-nav); /* navigation background color "white" */
 }
 
+/* Background style before adding Vanta.js - Animated website background */ 
+/* 
+.hero {
+    background-image: url("./images/particles.jpg");
+    background-color: lightgray;
+    background-position: center;
+    background-size: cover;
+}
+*/
+
+/* =======================================
+    5. SERVICES SECTION
+   ======================================= */
 /* SERVICES Page: MAIN Content Styles */
 /* class="main-content" Styles for All Pages */
 #services {
-    position: relative;
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     align-items: center;
-    padding: 40px 0;
+    padding: var(--spacing-xl) 0;
     text-align: center;
 }
-#services h1 {
-    margin-bottom: 16px;
-}
-#services h3 {
-    margin-bottom: 0;
-}
+#services h1 { margin-bottom: var(--spacing-md); }
+#services h3 { margin-bottom: 0; }
+
 .grid-container {
     width: 90vw;
-    height: 100vh;
     min-height: fit-content;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    margin-top: 20px;
-    padding: 30px;
-    border: 0;
+    gap: var(--spacing-lg); /* Modern replacement for grid-gap */
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-lg);
 }
 .grid-item-container {
-    width: 98%;
-    height: 98%; 
-    border-radius: 8px;
-    background-color: whitesmoke;
+    width: 100%;
+    height: 100%; 
+    border-radius: var(--spacing-sm);
+    background-color: var(--clr-bg-main);
 }
 .grid-item {
     min-width: 300px;
-    height: 50vh;
     min-height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 30px;
-    padding: 16px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgb(106, 106, 106, 0.4);
-    background-color: white;
+    padding: var(--spacing-md);
+    border-radius: var(--spacing-sm);
+    box-shadow: 0 4px 8px var(--clr-text-muted);
+    background-color: var(--clr-bg-nav);
 }
+.grid-item p { font-size: 0.9rem; }
+
 .item-img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    margin-bottom: 16px;
+    border-radius: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
 }
 
+/* =======================================
+    6. ABOUT US SECTION
+   ======================================= */
 /* ABOUT US Page: MAIN Content Styles */
-/* ...About page... */
 #about {
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     align-items: center;
     width: 100vw;
-    padding-top: 80px;
+    padding-top: var(--spacing-xl);
     text-align: center;
 }
-#about h1, h3 {
-    margin-bottom: 20px;
-    width: 80%;
+/* Fixed the selector here so it only targets About headings */
+#about h1, #about h3 {
+    margin-bottom: var(--spacing-lg);
+}
+.about-image {
+    max-width: 90vw;
+    height: auto;
 }
 #aboutTeam {
     width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: left;
     margin: 0 auto;
 }
+
 .avatars-container {
     display: flex;
-    flex-flow: row;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 10px;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
 }
 .avatars-caption {
     width: 7.8vw;
-    height: fit-content;
     display: flex;
     align-items: center;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: var(--spacing-sm);
 }
+.avatars-caption p { font-size: 1.4rem; }
+
 .teamAvatar {
     width: 6vw;
     height: 6vw;
-    background-color: rgb(230, 230, 230);
-    border: 1px solid black;
+    background-color: var(--clr-bg-main); /* main background color "whitesmoke" */
+    border: 1px solid var(--clr-text-main); /* main text color "black" */
     border-radius: 50%;
-    margin: 10px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
-#a-1 {
-    background-image: url(./images/A-1.png);
-}
-#a-2 {
-    background-image: url(./images/A-2.png);
-}
-#a-3 {
-    background-image: url(./images/A-3.png);
-}
-#a-4 {
-    background-image: url(./images/A-4.png);
-}
 
+#a-1 { background-image: url('./images/A-1.png'); }
+#a-2 { background-image: url('./images/A-2.png'); }
+#a-3 { background-image: url('./images/A-3.png'); }
+#a-4 { background-image: url('./images/A-4.png'); }
+
+
+/* =======================================
+    7. CONTACT SECTION
+   ======================================= */
 /* CONTACT Page: MAIN Content Styles */
-/* ...Contact page... */
 #contact {
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     align-items: center;
-    padding: 40px 0;
+    padding: var(--spacing-xl) 0;
     text-align: center;
 }
-#contact h1, h3, p {
-    margin-bottom: 16px;
+#contact h1, #contact h3, #contact p {
+    margin-bottom: var(--spacing-md);
 }
 
 .contact-form {
-    border: 1px solid black;
-    border-radius: 8px;
+    border: 1px solid var(--clr-text-main);
+    border-radius: var(--spacing-sm);
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: start;
-    flex-flow: column;
-    padding: 30px;
+    align-items: flex-start;
+    padding: var(--spacing-lg);
 }
-.contact-form input {
+.contact-form input, .contact-form textarea {
     width: 30vw;
     min-width: 280px;
-    height: 30px;
-    min-height: 20px;
-    margin: 10px;
+    margin: var(--spacing-sm);
+    font-family: var(--font-body);
 }
-.contact-form textarea {
-    width: 30vw;
-    min-width: 280px;
-    height: 60px;
-    min-height: 20px;
-    margin: 10px;
-}
+.contact-form input { height: 30px; }
+.contact-form textarea { height: 60px; }
+.contact-form label { font-size: 0.9rem; }
+
 .contact-form button {
     width: 28%;
     min-width: 180px;
     height: 30px;
-    margin: auto;   
-}
-#contact-form {
-    display: flex;
+    margin: 0 auto;   
 }
 #form-submit-message {
     display: none;
     width: 100vw;
-    height: 20%;
-    text-align: center;
-    padding: 16px;
-    margin: 60px 0 30px 0;
+    padding: var(--spacing-md);
+    margin: var(--spacing-xl) 0 var(--spacing-lg) 0;
     text-align: center;
 }
+
 #contact .location {
     width: 80%;
-    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =======================================
+    8. FOOTER
+   ======================================= */
+/* FOOTER Styles All Pages */
+.footer {
+    width: 100vw;
+    min-height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-flow: column;
+    flex-wrap: wrap;
+    padding: var(--spacing-md);
+    font-weight: bold;
+    background-color: var(--clr-bg-nav);
 }
+.footer p { font-size: 0.9rem; }
 
-/* MEDIA QUERY Semantic Styles */
-/* For Services Page */
+/* =======================================
+    9. MEDIA QUERIES (Responsive Design)
+   ======================================= */
+/* ...Desktop / Large Tables... */
 @media (max-width: 1320px) {
-
+    /* For Services Page */
    .grid-container {
-    width: 78vw;
-    grid-template-columns: repeat(2, 2fr);
-    margin-top: 10px;
+        width: 78vw;
+        grid-template-columns: repeat(2, 1fr);
     } 
     .grid-item {
-    height: 52vh;
-    min-height: 420px;
-    text-align: center;
+        min-height: 420px;
+        text-align: center;
     }
     .grid-item h3 {
         width: 100%;
-        margin: 0 auto 16 auto;
+        margin: 0 auto var(--spacing-md) auto;
     }
     /* For About Us Page */
-    .avatars-caption {
-    font-size: 1.1rem;
-    }
+    .avatars-caption { font-size: 1.1rem; }
 }
+
+/* ...Tablets... */
 @media (max-width: 1030px) {
     .grid-container {
-    width: 50%;
-    min-width: 420px;
-    grid-template-columns: repeat(1, 3fr);
-    margin-top: 10px;
+        width: 50%;
+        min-width: 420px;
+        grid-template-columns: 1fr;
     } 
-    .grid-item {
-        margin: 0;
-    }
     /* For About Us Page */
     .avatars-caption {
-    width: 8vw;
-    font-size: 0.7rem;
-    line-height: 1.2rem;
+        width: 8vw;
+        font-size: 0.7rem;
+        line-height: 1.2rem;
     }
 }
-/* ............... */
 
+/* ...Mobile Devices... */
 @media (max-width: 602px) {
-    /* For About Us Page */
-    .avatars-container {
-        width: 58%;
-    }
-    .avatars-caption {
-    width: 8vw;
-    font-size: 0.6rem;
-    line-height: 1.2rem;
-    }
-    .teamAvatar {
-    width: 8vw;
-    height: 8vw;
-    min-width: 40px;
-    min-height: 40px;
-    }
     /* Logo container All Pages */
     .logo {
-    width: 100%;
-    height: 130px;
-    padding: 8px;
+        width: 100%;
+        height: 130px;
+        padding: var(--spacing-sm);
+        align-items: center;
     }
     #logo-text {
-    font-size: 6rem;
-    margin: 16px 0;
+        font-size: 6rem;
+        margin: var(--spacing-md) 0;
     }
+    #logo-elem { font-size: 3rem; }
     #logo-caption {
-    font-size: 1rem;
-    margin: 6px 0;
-    }
-    #logo-elem {
-   font-size: 3rem; 
+        font-size: 1rem;
+        margin: 6px 0;
     }
     /* Navigation All Pages */
-   .nav-links {
-        width: 80vw;
-        margin-top: 16px;
-    } 
-    .nav-links li a {
-        font-size: 1.2rem;
-    }
     .navigation {
-    flex-flow: column;
-    justify-content: center;
-    height: 300px;
-    margin: 0;
+        flex-direction: column;
+        justify-content: center;
+        height: 300px;
     }
+    .nav-links {
+    width: 50vw;
+    grid-template-columns: repeat(2, 2fr);
+    gap: var(--spacing-md); /* Standardized to an 8px scale */
+    text-align: left;
+}
+    .nav-links li a { font-size: 1.2rem; }
     /* Main content All Pages */
-    .hero {
-    margin: 0;
-    }
-    .hero-text {
-        margin: 0;
-    }
-    /* Footer All Pages */
-    .footer {  
-        height: 30%; 
-        max-height: fit-content;
-        padding: 10px;
-    }
-    /* Home Page Main section */
-
     .hero-text h1 {
-    font-size: 2.4rem;
-    line-height: 3rem;
+        font-size: 2.4rem;
+        line-height: 3rem;
     }
     .hero-btns {
-    width: 60%;
-    margin-top: 30px;
+        width: 60%;
+        margin-top: var(--spacing-lg);
+    }
+
+    /* For About Us Page */
+    .avatars-container { width: 40%; }
+    .avatars-caption {
+        width: 8vw;
+        font-size: 0.6rem;
+        line-height: 1.2rem;
+    }
+    .teamAvatar {
+        width: 8vw;
+        height: 8vw;
+        min-width: 40px;
+        min-height: 40px;
+    }
+    /* Footer All Pages */
+    .footer {   
+        padding: var(--spacing-sm);
+    }
+    /* Contact Page */
+    .contact-form input, .contact-form textarea {
+    min-width: 260px;
     }
 }
 
+/* ...Small Mobile Devices... */
 @media (max-width: 436px) {
-    .nav-links {
-        width: 80vw;
-        margin-top: 16px;
-    } 
-    .hero-btns {
-    margin-top: 80px;
-    }
+    .hero-btns { margin-top: var(--spacing-xl); }
     .hero-btns button {
-    font-weight: bold;
-    font-size: 1.2rem;
-    width: 140px;
-    height: fit-content;
+        font-size: 1.2rem;
+        width: 140px;
+        height: auto;
+        padding: var(--spacing-sm) 0;
+    }
+    /* For About Us Page */
+    .avatars-container { max-width: 300px; }
+    .teamAvatar {
+        width: 7.8vw;
+        height: 7.8vw;
+        min-width: 36px;
+        min-height: 36px;
     }
     /* Footer All Pages */
     .copyright {
         width: 240px;
         min-width: 40%;
     }
-    /* For About Us Page */
-    .avatars-container {
-        width: 70%;
-    }
-    .teamAvatar {
-    width: 7.8vw;
-    height: 7.8vw;
-    min-width: 36px;
-    min-height: 36px;
+    /* Contact Page */
+    .contact-form input, .contact-form textarea {
+    min-width: 240px;
     }
 }
+
