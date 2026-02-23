@@ -32,25 +32,25 @@ const changeTextColorBtn = document.getElementById("change-textcolor-toggle-btn"
 const changeTitle = document.getElementById("change-title-toggle-content");
 // CLICK EVENT
 if (changeTextColorBtn && changeTitle) {
-     /* if (element) safety check. */
-     /* 1. Create a variable to keep track of the current state */
+     /* if (element) safety check. 
+        1. Create a variable to keep track of the current state */
      let isColorChanged = false;
     changeTextColorBtn.addEventListener('click', () => {
         
         if (!isColorChanged) {
-            /* Apply the new styles (Note: removed semicolons inside the quotes!) */
-            /* use CSS variables already defined in :root */
+            /* Apply the new styles (Note: removed semicolons inside the quotes!) 
+                use CSS variables already defined in :root */
             changeTitle.style.color = "var(--clr-accent)";
             changeTitle.style.textShadow = "1px 1px 2px var(--clr-dark-shadow)";
 
-            /* Update the state */
+            // Update the state
             isColorChanged = true;
         } else {
-            /* Revert back to the original styles */
+            // Revert back to the original styles
             changeTitle.style.color = "var(--clr-text-main)";
             changeTitle.style.textShadow = "1px 1px 2px var(--clr-accent-shadow)";
 
-            /* Update the state */
+            // Update the state
             isColorChanged = false;
         }
     });
@@ -157,8 +157,3 @@ const submitMessageBtn = document.getElementById("submit-message");
 const submitParagraph = document.getElementById("form-submit-message");
 const contactForm = document.getElementById("contact-form");
 // CLICK EVENT
-submitMessageBtn.addEventListener("click", function() {
-    submitParagraph.style.display = "block"
-    contactForm.style.display = "none"
-})
- 
