@@ -139,11 +139,21 @@ p, a { font-size: 1rem; line-height: 1.6rem; }
     text-align: center;
     padding: var(--spacing-md);    
 }
+#change-title-toggle-content {
+    /* This Title will change text and text color with Toggle buttons */
+    color: var(--clr-text-main);
+    text-shadow: 1px 1px 2px rgb(163, 246, 252);
+}
+#change-text-toggle-content {
+    /* This Title text will change with Toggle button */
+    color: var(--clr-text-main);
+}
+
 .hero-text h1 {
     font-size: 3rem;
     margin-bottom: var(--spacing-md);
 }
-.hero-btns {
+.hero-toggle-btns {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,18 +163,22 @@ p, a { font-size: 1rem; line-height: 1.6rem; }
     width: 70%;
     min-width: 200px;
 }
-.hero-btns button {
+.hero-toggle-btns button {
     width: 130px;
     height: 50px;
     font-weight: bold;
 }
-#emojis {
+#emojis-toggle-content {
+    /* This paragraph will change it's visibility with Toggle button */
+    /* visibility save plase for this element in the document flow */
     visibility: hidden;
     font-size: 1.6rem;
     text-shadow: 1px 1px 2px var(--clr-accent-shadow);
-    margin-bottom: var(--spacing-md);
+    margin: var(--spacing-md) 0;
 }
-#secret-message {
+#secret-message-toggle-content {
+    /* This h3 will change it's visibility with Toggle button */
+    /* visibility save plase for this element in the document flow */
     visibility: hidden;
     width: 40%;
     min-width: 180px;
@@ -176,6 +190,15 @@ p, a { font-size: 1rem; line-height: 1.6rem; }
     border: 1px solid var(--clr-text-main);
     border-radius: var(--spacing-sm); 
     background-color: var(--clr-bg-nav); /* navigation background color "white" */
+}
+#addtext-toggle-content {
+    /* This h1 will change it's display parameter with Toggle button */
+    /* display don't save plase for this element in the document flow */
+    display: none;
+    margin-top: 20px;
+    width: 100%;
+    padding: var(--spacing-md);
+    text-align: center;
 }
 
 /* Background style before adding Vanta.js - Animated website background */ 
@@ -230,7 +253,10 @@ p, a { font-size: 1rem; line-height: 1.6rem; }
     box-shadow: 0 4px 8px var(--clr-text-muted);
     background-color: var(--clr-bg-nav);
 }
-.grid-item p { font-size: 0.9rem; }
+.grid-item p { 
+    font-size: 0.9rem; 
+    margin: 0 var(--spacing-md);
+}
 
 .item-img {
     width: 100%;
@@ -524,7 +550,7 @@ p, a { font-size: 1rem; line-height: 1.6rem; }
         font-size: 2.4rem;
         line-height: 3rem;
     }
-    .hero-btns {
+    .hero-toggle-btns {
         width: 60%;
         margin-top: var(--spacing-lg);
     }
@@ -565,8 +591,8 @@ p, a { font-size: 1rem; line-height: 1.6rem; }
 
 /* ...Small Mobile Devices... */
 @media (max-width: 436px) {
-    .hero-btns { margin-top: var(--spacing-xl); }
-    .hero-btns button {
+    .hero-toggle-btns { margin-top: var(--spacing-xl); }
+    .hero-toggle-btns button {
         font-size: 1.2rem;
         width: 140px;
         height: auto;

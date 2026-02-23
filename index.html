@@ -27,20 +27,26 @@
     <main class="main-content">
       <section id="bg-element" class="hero">
           <div class="hero-text">
-            <h1>Strategic Creativity</h1>
-            <h3>Let's help your business grow!</h3> 
-            <p id="emojis">🚀⭐💫🦄✨🚀🪂🌈🔥</p> 
+            <h1 id="change-title-toggle-content">Strategic Creativity</h1>
+            <h3 id="change-text-toggle-content">
+              Let's help your business grow!</h3> 
+            <p id="emojis-toggle-content">🚀⭐💫🦄✨🚀🪂🌈🔥</p> 
           </div>
-          <div class="hero-btns">
-          <button id="changeTextBtn">New Goal</button>
-          <button id="changeTextColorBtn">Some Color</button>
-          <button id="changeTitleBtn">Rename</button>
-          <button id="addTextBtn">Add Text</button>
-          <button id="showEmojisBtn">Show Emojis</button>
-          <button id="secretMessageBtn">Secret</button>
+          <div class="hero-toggle-btns">
+              <button id="change-text-toggle-btn">New Goal</button>
+              <button id="change-textcolor-toggle-btn">Some Color</button>
+              <button id="change-title-toggle-btn">Rename</button>
+              <button id="displ-emojis-toggle-btn">Show Emojis</button>
+              <button id="addtext-toggle-btn">Add Text</button>
+              <button id="secretmessage-toggle-btn">Secret</button>
           </div>
-          <div id="secret-message" class="hero-text">
+          <div id="secret-message-toggle-content" class="hero-text">
             <h3>🎊 THANK YOU FOR YOUR VISIT! 🎉</h3>
+          </div>
+          <div id="addtext-toggle-content">
+            <h1>All buttons on this page are Toggle Buttons. 
+              You can click the every button a second time.
+            </h1>
           </div> 
       </section>
     </main>
@@ -50,6 +56,8 @@
         <p>&copy; 2026 Branding Design Agency | All rights reserved.</p>
       </div>
     </footer>
+    <!-- JS link -->
+    <script src="app.js"></script>
     <!-- Vanta.js Animated website backgrounds in a few lines of code. -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>  
