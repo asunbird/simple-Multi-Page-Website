@@ -4,9 +4,10 @@
 /* =======================================
     4. HERO SECTION
    ======================================= */
-// HOME Page BUTTONS
+// HOME Page Toggle BUTTONS
 
 // ...Button "New Goal"...
+// this button changes text content in h3 elem in the Hero section
 const changeTextBtn = document.getElementById("change-text-toggle-btn");
 const changeText = document.getElementById("change-text-toggle-content");
 // CLICK EVENT
@@ -26,66 +27,79 @@ if (changeTextBtn && changeText) {
     });
 }
 
-
-// ...Button "Some Color"... 
+// ...Button "Some Color"...
+// this button changes text style in h1 elem in the Hero section
 const changeTextColorBtn = document.getElementById("change-textcolor-toggle-btn");
 const changeTitle = document.getElementById("change-title-toggle-content");
 // CLICK EVENT
-if (changeTextColorBtn && changeTitle) {
-     /* if (element) safety check. 
-        1. Create a variable to keep track of the current state */
-     let isColorChanged = false;
-    changeTextColorBtn.addEventListener('click', () => {
-        
+if (changeTextColorBtn && changeTitle) { // if (element) safety check. 
+    //1. Create a variable to keep track of the current state
+    let isColorChanged = false;
+    changeTextColorBtn.addEventListener('click', () => {   
         if (!isColorChanged) {
-            /* Apply the new styles (Note: removed semicolons inside the quotes!) 
-                use CSS variables already defined in :root */
+            // Apply the new styles (Note: removed semicolons inside the quotes!) 
+            // use CSS variables already defined in :root  
             changeTitle.style.color = "var(--clr-accent)";
             changeTitle.style.textShadow = "1px 1px 2px var(--clr-dark-shadow)";
-
-            // Update the state
+            // and Update the current state variable
             isColorChanged = true;
         } else {
             // Revert back to the original styles
             changeTitle.style.color = "var(--clr-text-main)";
             changeTitle.style.textShadow = "1px 1px 2px var(--clr-accent-shadow)";
-
-            // Update the state
+            // and Update the current state variable
             isColorChanged = false;
         }
     });
 }
 
-
 // ...Button "Rename"... 
+// this button changes text content in h1 elem in the Hero section
 const changeTitleBtn = document.getElementById("change-title-toggle-btn");
 // CLICK EVENT
-changeTitleBtn.addEventListener("click", function() {
-    changeTitle.textContent = "Branding and Design Agency"
-})
-// DOUBLE CLICK EVENT
-changeTitleBtn.addEventListener("dblclick", function() {
-    changeTitle.textContent = "Strategic Creativity"
-})
+if (changeTitleBtn && changeTitle) {
+    // if (element) safety check.
+    changeTitleBtn.addEventListener('click', () => {
+        //1. Create a variable to keep track of the current state
+        const current = (changeTitle.textContent || "").trim();
+        if (current.includes("Strategic Creativity")) {
+            // Apply the new text
+            changeTitle.textContent = "Branding and Design Agency";
+        } else {
+            // Revert back to the original text
+            changeTitle.textContent = "Strategic Creativity";
+        }
+    });
+}
 
 // ...Button "Show Emojis"... 
+// shows invisible p elem under headings in the Hero section
 const showEmojisBtn = document.getElementById("displ-emojis-toggle-btn");
 const emojis = document.getElementById("emojis-toggle-content");
 // CLICK EVENT
-showEmojisBtn.addEventListener("click", function() {
-    emojis.style.visibility = "visible"
-})
-// DOUBLE CLICK EVENT
-showEmojisBtn.addEventListener("dblclick", function() {
-    emojis.style.visibility = "hidden"
-})
-
+if (showEmojisBtn && emojis) {
+    /* 1. Create a variable to keep track of the current state */
+    let isVisibilityVisible = false;
+    showEmojisBtn.addEventListener('click', () => {
+        if (!isVisibilityVisible) {
+            /* Apply the new styles */
+            emojis.style.visibility = "visible";
+            /* Update the state */
+            isVisibilityVisible = true;
+        } else {
+            /* Revert back to the original styles */
+            emojis.style.visibility = "hidden";
+            /* Update the state */
+            isVisibilityVisible = false;
+        }
+    });
+}
 
 // ...Button "Add Text"... 
+// shows invisible h1 elem under toggle buttons in the Hero section
 const addTextBtn = document.getElementById("addtext-toggle-btn");
 const addTextContent = document.getElementById("addtext-toggle-content");
 // CLICK EVENT
-
 if (addTextBtn && addTextContent) {
     /* 1. Create a variable to keep track of the current state */
     let isVisibilityChanged = false;
@@ -101,47 +115,28 @@ if (addTextBtn && addTextContent) {
             /* Update the state */
             isVisibilityChanged = false;
         }
-
     });
 }
-if (changeTextColorBtn && changeTitle) {
-     /* if (element) safety check. */
-     /* 1. Create a variable to keep track of the current state */
-     let isColorChanged = false;
-    changeTextColorBtn.addEventListener('click', () => {
-        
-        if (!isColorChanged) {
-            /* Apply the new styles (Note: removed semicolons inside the quotes!) */
-            /* use CSS variables already defined in :root */
-            changeTitle.style.color = "var(--clr-accent)";
-            changeTitle.style.textShadow = "1px 1px 2px var(--clr-dark-shadow)";
-
-            /* Update the state */
-            isColorChanged = true;
-        } else {
-            /* Revert back to the original styles */
-            changeTitle.style.color = "var(--clr-text-main)";
-            changeTitle.style.textShadow = "1px 1px 2px var(--clr-accent-shadow)";
-
-            /* Update the state */
-            isColorChanged = false;
-        }
-    });
-}
-
-
 
 // ...Button "Secret"... 
+// shows invisible Secret message under toggle buttons in the Hero section
 const secretMessageBtn = document.getElementById("secretmessage-toggle-btn");
 const secretMessage = document.getElementById("secret-message-toggle-content");
 // CLICK EVENT
-secretMessageBtn.addEventListener("click", function() {
-    secretMessage.style.visibility = "visible"
-})
-// DOUBLE CLICK EVENT
-secretMessageBtn.addEventListener("dblclick", function() {
-    secretMessage.style.visibility = "hidden"
-})
+if (secretMessageBtn && secretMessage) {
+   let isVisibilityChanged = false;
+   secretMessageBtn.addEventListener('click', () => {
+      if (!isVisibilityChanged) {
+        secretMessage.style.visibility = "visible";
+        isVisibilityChanged = true;
+      } else {
+        secretMessage.style.visibility = "hidden";
+        isVisibilityChanged = false;
+      }
+   });
+}
+// HOME Page Toggle BUTTONS end
+
 
 
 
