@@ -138,17 +138,49 @@ if (secretMessageBtn && secretMessage) {
 // HOME Page Toggle BUTTONS end
 
 
-
-
+/* =======================================
+    7. ABOUT US SECTION
+   ======================================= */
 
 // MOUSEOVER EVENT
+
+
 
 
 /* =======================================
     7. CONTACT SECTION
    ======================================= */
 // CONTACT FORM BUTTON
-const submitMessageBtn = document.getElementById("submit-message");
-const submitParagraph = document.getElementById("form-submit-message");
-const contactForm = document.getElementById("contact-form");
+
 // CLICK EVENT
+
+/* Listening for a Form Submit
+...................................*/
+// Get the form element
+const contactForm = document.getElementById("contact-form");
+const logMessage = document.getElementById("form-submit-message");
+
+//
+// Safety Check!
+if (contactForm && logMessage) {
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    // get the form data
+    let username = document.getElementById("name");
+    let useremail = document.getElementById("email");
+    let usermessage = document.getElementById("message");
+
+    // perform operation with form input
+    contactForm.remove();
+    logMessage.style.display = "block"; // change to create the element
+
+    console.log(
+      `This form has a username of ${username.value} 
+        and email of ${useremail.value} 
+        and message of ${usermessage.value}`);
+
+    username.value = "";
+    useremail.value = "";
+    usermessage.value = "";   
+});
+}

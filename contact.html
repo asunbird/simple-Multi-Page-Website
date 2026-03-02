@@ -27,38 +27,48 @@
     <!-- Contact Page Main section -->
     <main class="main-content">
       <section id="contact">
+        <!-- Contact Team Buttons Cards with BG image -->
         <div class="contact-buttons-bg">
             <div class="contact-btns-grid">
-              <div class="btns-grid-item"> 
-                     
-                    <div id="a-1" class="contact-Avatar"></div>
-                    <div class="contact-text">
-                        <h1>Talk to a member of our sales team</h1>
-                        <p>We'll help you find the right products and pricing for your business.</p>
+                    <div class="btns-grid-item">
+                      <div id="a-1" class="contact-Avatar"></div>
+                      <div class="contact-text">
+                          <h1>Talk to a member of our sales team</h1>
+                          <p>We'll help you find the right products and pricing for your business.</p>
+                      </div>
+                    <!--  
+                    <a href="mailto:b&d.sales@gmail.com">
+                      <button id="contact-Btn-1">Contact Sales</button>
+                      </a>
+                    -->
                     </div>
-                    <button id="contact-Btn-1">Contact Sales</button>
-
-              </div>
-              <div class="btns-grid-item">
-  
-                    <div id="a-4" class="contact-Avatar"></div>
-                    <div class="contact-text">
-                        <h1>Product and account support</h1>
-                        <p>Our help center always open for business. 
-                          If you're looking for answers, we're here to lend a hand.</p>
-                    </div>
-                    <button id="contact-Btn-2">Help center</button>
-                
-              </div>
+                                                        
+                    <div class="btns-grid-item">
+                        <div id="a-4" class="contact-Avatar"></div>
+                        <div class="contact-text">
+                            <h1>Product and account support</h1>
+                            <p>Our help center always open for business. 
+                              If you're looking for answers, we're here to lend a hand.</p>
+                        </div>
+                        <!--
+                        <a href="mailto:b&d.support@gmail.com">
+                          <button id="contact-Btn-2">Help center</button>
+                        </a>
+                        -->
+                      </div>
             </div>       
-          </div>
-
+        </div>
+        
         <h1>Branding and Design Agency</h1>
         <div id="form-submit-message">
             <h3>🎊 THANKS FOR CONNECTING WITH US! 🎉</h3>
-          </div> 
-        <form id="contact-form" class="contact-form" action>
-          <h3>Contact us</h3>
+        </div> 
+        <!-- Contact Form -- Emeil, Name, Message and Submit Buton -->
+        <form action="" id="contact-form" class="contact-form" 
+        action="https://formsubmit.co/b&d.support@gmail.com" 
+        method="POST">
+          <h3>Contact Us - Reach Out Support and Assistance
+          </h3>
           <label for="email" name="email">Email:</label>
           <input id="email" type="email" name="email" required>
           <label for="name" name="name">Name:</label>
@@ -66,7 +76,7 @@
           <label for="message" name="message">Enter Your Message:</label>
           <textarea id="message" name="message" required></textarea>
 
-          <button id="submit-message" class="btn" type="submit">
+          <button id="contact-form-submit-btn" class="btn" type="submit">
             Send Message</button>
         </form><br>
         <div class="location">
@@ -85,5 +95,7 @@
       </div>
     </footer>
     <form action=""></form>
+    <!-- JS link -->
+    <script src="app.js"></script>
   </body>
 </html>
