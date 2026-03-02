@@ -396,12 +396,6 @@ p, a { font-size: 1rem; line-height: 1.6rem; }
     min-height: 210px;
 
 }
-#contact-Btn-1, #contact-Btn-2 {
-    min-width: 180px;
-    height: 50px;
-    font-weight: bold;
-    margin: 0 auto;
-}
 
 .contact-form {
     border: 1px solid var(--clr-text-main);
@@ -432,6 +426,12 @@ p, a { font-size: 1rem; line-height: 1.6rem; }
     border-radius: 3px; 
     font-weight: bold;
     letter-spacing: 0.05rem;
+}
+#contact-form-reset-btn {
+    min-width: 180px;
+    height: 50px;
+    font-weight: bold;
+    margin: 0 auto;
 }
 #form-submit-message {
     display: none;
