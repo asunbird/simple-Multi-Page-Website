@@ -124,17 +124,28 @@ const secretMessageBtn = document.getElementById("secretmessage-toggle-btn");
 const secretMessage = document.getElementById("secret-message-toggle-content");
 // CLICK EVENT
 if (secretMessageBtn && secretMessage) {
-   let isVisibilityChanged = false;
-   secretMessageBtn.addEventListener('click', () => {
-      if (!isVisibilityChanged) {
-        secretMessage.style.visibility = "visible";
-        isVisibilityChanged = true;
-      } else {
-        secretMessage.style.visibility = "hidden";
-        isVisibilityChanged = false;
-      }
-   });
+    /* 1. Create a variable to keep track of the current state */
+    let secretText = null;
+    secretMessageBtn.addEventListener('click', () => {
+        if (!secretMessage) 
+            return; // extra runtime guard in case addTextContent is not present for some reason
+        if (secretText === null) {
+           secretText = document.createElement("h3");
+            secretText.textContent = "🎊 THANK YOU FOR YOUR VISIT! 🎉";
+            secretText.style.border = "1px solid var(--clr-text-main)";
+            secretText.style.backgroundColor = "var(--clr-bg-nav)"; /* navigation background color "white" */
+            secretText.style.padding = "16px";
+            secretText.style.borderRadius = "8px";
+
+            secretMessage.appendChild(secretText);
+
+        } else {
+            secretText.remove();
+            secretText = null;
+        }
+    });
 }
+
 // HOME Page Toggle BUTTONS end
 
 

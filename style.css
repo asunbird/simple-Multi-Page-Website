@@ -190,19 +190,12 @@ p, a { font-size: 1rem; line-height: 1.6rem; }
 
 }
 #secret-message-toggle-content {
-    /* This h3 will change it's visibility with Toggle button */
-    /* visibility save plase for this element in the document flow */
-    visibility: hidden;
     width: 40%;
     min-width: 180px;
-    padding: var(--spacing-lg) var(--spacing-md) var(--spacing-md) var(--spacing-md);
     margin-top: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--clr-text-main);
-    border-radius: var(--spacing-sm); 
-    background-color: var(--clr-bg-nav); /* navigation background color "white" */
 }
 #addtext-toggle-content {
 
