@@ -83,7 +83,7 @@ if (showEmojisBtn && heroText) { // if (element) safety check.
     showEmojisBtn.addEventListener('click', () => {
         // extra runtime guard in case heroText is not present for some reason
         if (!heroText) return;
-        if (emojis == null) {
+        if (emojis === null) {
             emojis = document.createElement("p");
             emojis.classList.add("emojis-toggle-content");
             emojis.textContent = "🚀⭐💫🦄✨🚀🪂🌈🔥";
@@ -102,18 +102,18 @@ const addTextContent = document.getElementById("addtext-toggle-content");
 // CLICK EVENT
 if (addTextBtn && addTextContent) {
     /* 1. Create a variable to keep track of the current state */
-    let isVisibilityChanged = false;
+    let unvisText = null;
     addTextBtn.addEventListener('click', () => {
-        if (!isVisibilityChanged) {
-            /* Apply the new styles */
-            addTextContent.style.display = "block";
-            /* Update the state */
-            isVisibilityChanged = true;
+        if (!addTextContent) 
+            return; // extra runtime guard in case addTextContent is not present for some reason
+        if (unvisText === null) {
+           unvisText = document.createElement("h1");
+        unvisText.textContent = "All buttons on this page are Toggle Buttons. \nYou can click the every button a second time.";
+           addTextContent.appendChild(unvisText);
+
         } else {
-            /* Revert back to the original styles */
-            addTextContent.style.display = "none";
-            /* Update the state */
-            isVisibilityChanged = false;
+            unvisText.remove();
+            unvisText = null;
         }
     });
 }
