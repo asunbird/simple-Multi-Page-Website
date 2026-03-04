@@ -141,7 +141,14 @@ p, a { font-size: 1rem; line-height: 1.6rem; }
 }
 .hero-text {
     text-align: center;
-    padding: var(--spacing-md);    
+    padding: var(--spacing-md); 
+    height: 100px; /* Set a fixed height to prevent layout shifts when toggling content */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
 }
 #change-title-toggle-content {
     /* This Title will change text and text color with Toggle buttons */
@@ -166,21 +173,21 @@ p, a { font-size: 1rem; line-height: 1.6rem; }
     margin-top: var(--spacing-md);
     width: 70%;
     min-width: 200px;
-    position: absolute;
-    top: 180px;
+
 }
 .hero-toggle-btns button {
     width: 130px;
     height: 50px;
     font-weight: bold;
+    margin-top: 30px;
 }
-#emojis-toggle-content {
-    /* This paragraph will change it's visibility with Toggle button */
-    /* visibility save plase for this element in the document flow */
-    visibility: hidden;
+.emojis-toggle-content {
     font-size: 1.6rem;
     text-shadow: 1px 1px 2px var(--clr-accent-shadow);
-    margin: var(--spacing-md) 0;
+    margin: var(--spacing-md) auto;
+    position: absolute;
+    top: 80px;
+
 }
 #secret-message-toggle-content {
     /* This h3 will change it's visibility with Toggle button */
@@ -189,7 +196,7 @@ p, a { font-size: 1rem; line-height: 1.6rem; }
     width: 40%;
     min-width: 180px;
     padding: var(--spacing-lg) var(--spacing-md) var(--spacing-md) var(--spacing-md);
-    margin-top: var(--spacing-md);
+    margin-top: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -201,7 +208,7 @@ p, a { font-size: 1rem; line-height: 1.6rem; }
     /* This h1 will change it's display parameter with Toggle button */
     /* display don't save plase for this element in the document flow */
     display: none;
-    margin-top: 20px;
+    margin-top: 30px;
     width: 100%;
     padding: var(--spacing-md);
     text-align: center;
