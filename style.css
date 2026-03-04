@@ -17,6 +17,9 @@ a:active, a:focus, a:hover, a:visited {
     color: var(--clr-text-main);
 }
 
+button { transition: transform 0.3s ease-in-out; }
+button:hover { transform: scale(1.05); }
+
 /* =======================================
     1. VARIABLES (Design "Control Center")
    ======================================= */
@@ -264,6 +267,10 @@ p, a { font-size: 1rem; line-height: 1.6rem; }
     box-shadow: 0 4px 8px var(--clr-text-muted);
     background-color: var(--clr-bg-nav);
 }
+
+.grid-item { transition: transform 0.3s ease-in-out; }
+.grid-item:hover { transform: scale(1.05); }
+
 .grid-item p { 
     font-size: 0.9rem; 
     margin: 0 var(--spacing-md);
@@ -337,6 +344,8 @@ p, a { font-size: 1rem; line-height: 1.6rem; }
 #a-3 { background-image: url('./images/A-3.png'); }
 #a-4 { background-image: url('./images/A-4.png'); }
 
+.teamAvatar { transition: transform 0.3s ease-in-out; }
+.teamAvatar:hover { transform: scale(1.05); }
 
 /* =======================================
     7. CONTACT SECTION
