@@ -87,6 +87,9 @@ p, a { font-size: 1rem; line-height: 1.6rem; }
     align-items: flex-start;
     justify-content: center;
 }
+.logo a { transition: transform 0.3s ease-in-out; }
+.logo a:hover { transform: scale(1.05); }
+
 #logo-text {
     font-size: 3rem;
     font-weight: bold;
@@ -118,6 +121,10 @@ p, a { font-size: 1rem; line-height: 1.6rem; }
     font-size: 1.4rem;
     font-weight: bold;
     text-shadow: 1px 1px 2px var(--clr-accent-shadow);
+    transition: transform 0.3s ease-in-out;
+}
+.nav-links li a:hover {
+    transform: scale(1.05);
 }
 #deadLink {
     color: var(--clr-text-muted);
