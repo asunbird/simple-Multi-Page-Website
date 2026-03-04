@@ -12,6 +12,10 @@ div, p, nav, img, h1, h2, h3, h4, h5, h6, ul, li, a, body, header, footer, secti
 a, button {
     cursor: pointer;
 }
+a:active, a:focus, a:hover, a:visited {
+    text-decoration: none;
+    color: var(--clr-text-main);
+}
 
 /* =======================================
     1. VARIABLES (Design "Control Center")
@@ -88,7 +92,7 @@ p, a { font-size: 1rem; line-height: 1.6rem; }
     font-weight: bold;
     letter-spacing: 0.5rem;
     text-shadow: 1px 1px 2px var(--clr-accent-shadow);
-    margin: var(--spacing-sm) 0;
+    margin-top: var(--spacing-sm);
 }
 #logo-elem {
    font-size: 2rem; 
@@ -105,7 +109,7 @@ p, a { font-size: 1rem; line-height: 1.6rem; }
     width: 60vw;
     min-height: fit-content;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-lg); /* Standardized to an 8px scale */
     text-align: center;
 }
@@ -527,6 +531,8 @@ p, a { font-size: 1rem; line-height: 1.6rem; }
         height: 130px;
         padding: var(--spacing-sm);
         align-items: center;
+        justify-content: center;
+        display: flex;
     }
     #logo-text {
         font-size: 6rem;
@@ -541,15 +547,19 @@ p, a { font-size: 1rem; line-height: 1.6rem; }
     .navigation {
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         height: 300px;
     }
     .nav-links {
     width: 50vw;
-    grid-template-columns: repeat(2, 2fr);
+    min-width: fit-content;
     gap: var(--spacing-md); /* Standardized to an 8px scale */
     text-align: left;
 }
     .nav-links li a { font-size: 1.2rem; }
+    .nav-links li:hover { transition: 0.3s ease-in-out; }
+    .nav-links li:hover { transform: scale(1.05); }
+
     /* Main content All Pages */
     .hero-text h1 {
         font-size: 2.4rem;
