@@ -166,6 +166,8 @@ p, a { font-size: 1rem; line-height: 1.6rem; }
     margin-top: var(--spacing-md);
     width: 70%;
     min-width: 200px;
+    position: absolute;
+    top: 180px;
 }
 .hero-toggle-btns button {
     width: 130px;

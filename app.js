@@ -75,22 +75,22 @@ if (changeTitleBtn && changeTitle) {
 // ...Button "Show Emojis"... 
 // shows invisible p elem under headings in the Hero section
 const showEmojisBtn = document.getElementById("displ-emojis-toggle-btn");
-const emojis = document.getElementById("emojis-toggle-content");
+const heroText = document.querySelector(".hero-text"); // to append the emojis after the hero text
 // CLICK EVENT
-if (showEmojisBtn && emojis) {
-    /* 1. Create a variable to keep track of the current state */
-    let isVisibilityVisible = false;
+// require both button and target container to exist
+if (showEmojisBtn && heroText) { // if (element) safety check.
+    let emojis = null; // variable to keep track of the emojis element
     showEmojisBtn.addEventListener('click', () => {
-        if (!isVisibilityVisible) {
-            /* Apply the new styles */
-            emojis.style.visibility = "visible";
-            /* Update the state */
-            isVisibilityVisible = true;
+        // extra runtime guard in case heroText is not present for some reason
+        if (!heroText) return;
+        if (emojis == null) {
+            emojis = document.createElement("p");
+            emojis.classList.add("emojis-toggle-content");
+            emojis.textContent = "🚀⭐💫🦄✨🚀🪂🌈🔥";
+            heroText.appendChild(emojis);
         } else {
-            /* Revert back to the original styles */
-            emojis.style.visibility = "hidden";
-            /* Update the state */
-            isVisibilityVisible = false;
+            emojis.remove();
+            emojis = null;
         }
     });
 }
