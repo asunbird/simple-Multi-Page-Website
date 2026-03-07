@@ -171,27 +171,48 @@ if (secretMessageBtn && secretMessage) {
 const contactForm = document.getElementById("contact-form");
 const logMessage = document.getElementById("form-submit-message");
 
-//
 // Safety Check!
 if (contactForm && logMessage) {
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    // get the form data
-    let username = document.getElementById("name");
-    let useremail = document.getElementById("email");
-    let usermessage = document.getElementById("message");
+contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault(); // Stop standard page reload on form submission
+    
+    // get the form data elements
+    let usernameInput = document.getElementById("name");
+    let useremailInput = document.getElementById("email");
+    let usermessageInput = document.getElementById("message");
+
+    // Extract the actual values
+    const formData = {
+        name: usernameInput.value,
+        email: useremailInput.value,
+        message: usermessageInput.value
+    };
+
+    // Send the data to the server using Fetch API
+    try {
+            // Send the data to your Node.js backend
+            const response = await fetch("http://localhost:3000/send-email/testSite", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            });
+
 
     // perform operation with form input
-    contactForm.remove();
-    logMessage.style.display = "block"; // change to create the element
-
-    console.log(
-      `This form has a username of ${username.value} 
-        and email of ${useremail.value} 
-        and message of ${usermessage.value}`);
-
-    username.value = "";
-    useremail.value = "";
-    usermessage.value = "";   
+    if (response.ok) {
+        // If the server successfully sends the email, update the DOM
+        contactForm.remove();
+        logMessage.style.display = "block"; // change to create the element
+        console.log("Email sent to server successfully!");
+    } else {
+        console.error("Server responded with an error.");
+        alert("Something went wrong. Please try again later.");
+    }
+    } catch (error) {
+        console.error("Error connecting to server:", error);
+        alert("Could not connect to the server. Make sure it is running!");
+    }
 });
 }
