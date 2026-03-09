@@ -161,19 +161,17 @@ if (secretMessageBtn && secretMessage) {
 /* =======================================
     7. CONTACT SECTION
    ======================================= */
-// CONTACT FORM BUTTON
-
-// CLICK EVENT
+// CONTACT FORM SUBMIT
 
 /* Listening for a Form Submit
 ...................................*/
 // Get the form element
 const contactForm = document.getElementById("contact-form");
-const logMessage = document.getElementById("form-submit-message");
+const submitMessage = document.getElementById("form-submit-message");
 
 // Safety Check!
-if (contactForm && logMessage) {
-contactForm.addEventListener('submit', async (e) => {
+if (contactForm && submitMessage) { // if (element) safety check.
+    contactForm.addEventListener('submit', async (e) => {
     e.preventDefault(); // Stop standard page reload on form submission
     
     // get the form data elements
@@ -181,6 +179,12 @@ contactForm.addEventListener('submit', async (e) => {
     let useremailInput = document.getElementById("email");
     let usermessageInput = document.getElementById("message");
 
+    // Guard against missing inputs (protects against DOM differences)
+    if (!usernameInput || !useremailInput || !usermessageInput) {
+        console.error('Contact form inputs are missing from the page.');
+        alert('Form inputs are not available. Please reload the page.');
+        return;
+    }
     // Extract the actual values
     const formData = {
         name: usernameInput.value,
@@ -188,10 +192,12 @@ contactForm.addEventListener('submit', async (e) => {
         message: usermessageInput.value
     };
 
+
     // Send the data to the server using Fetch API
     try {
+            const siteName = "test"; // You can change this to a dynamic value if needed
             // Send the data to your Node.js backend
-            const response = await fetch("http://localhost:3000/send-email/testSite", {
+            const response = await fetch(`http://localhost:3000/send-email/${siteName}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -200,12 +206,21 @@ contactForm.addEventListener('submit', async (e) => {
             });
 
 
-    // perform operation with form input
+    // perform operation with form input values and server response
     if (response.ok) {
         // If the server successfully sends the email, update the DOM
-        contactForm.remove();
-        logMessage.style.display = "block"; // change to create the element
+        const originalMessage = submitMessage.textContent;
+        submitMessage.textContent = "🎊 Thank you for connecting with us! 🎉";
+        
+        // Clear the form inputs
+        contactForm.reset();
         console.log("Email sent to server successfully!");
+
+        // Revert the message after 20 seconds
+        setTimeout(() => {
+            submitMessage.textContent = originalMessage;
+        }, 10000);
+
     } else {
         console.error("Server responded with an error.");
         alert("Something went wrong. Please try again later.");
